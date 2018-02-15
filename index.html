@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">       
+        
+           
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="container-fluid main-wrapper">
+            <div class="container">
+                            
+                <div class="jumbotron">
+                    <h1 class="display-4">News API</h1>
+                    <p class="lead">This is a simple News API where you can select news sources and its category like business, sports etc. </p>
+                    <p>The information display below is top headlines.</p>
+                </div>
+
+                <div class="newsDropDown">
+                   <div class="newsource">
+                        <select id="news-selection" class="custom-select custom-select-lg mb-3">
+                            <option selected>SELECT NEWS SOURCE</option>
+                            <option value="us">United States</option>
+                            <option value="de">German</option>
+                            <option value="ru">Russia</option>
+                            <option value="sg">Singapore</option>
+                            <option value="jp">Japan</option>
+                            <option value="ph">Philippines</option>
+                        </select>
+                   </div>
+
+                    <div class="newsCat">
+                        <select id="cat-selection" class="custom-select custom-select-lg mb-3">
+                            <option selected>SELECT NEWS CATEGORY</option>
+                            <option value="General">General</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="Business">Business</option>
+                            <option value="Technology">Technology</option>
+                        </select>
+                    </div>
+                    <div class="searchBox">
+                        <button id="searchBtn" type="button" class="btn btn-success">
+                             Search<i class="spinner fa fa-spinner fa-spin"></i>
+                        </button>
+                    </div>  
+            </div>        
+
+              
+            <!-- data will display here.. -->
+            <div class="errorDisplayer"></div>
+            <div class="displayRequestData"></div>
+        </div> <!-- container -->
+
+        
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        </body>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/axios.js"></script>
+        <script src="/js/pagination.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>     
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
+
