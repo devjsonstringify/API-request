@@ -1,8 +1,7 @@
-
-
 require ('bootstrap/dist/css/bootstrap.min.css');
 require ('jquery');
 require ('bootstrap');
+var moment = require('moment');
 
 var axios = require("axios"), //global variables
 _ = require("lodash"), 
@@ -22,10 +21,17 @@ searchBtn.addEventListener("click", sourceSelected); //on click
 newsOpt.addEventListener("change",  IsnotValid);
 catOpt.addEventListener("change", IsnotValid);
 
+function converTime(time){
+    var published = moment(time);
+    var currTime = _.now();
+    var result = published.from(currTime);  
+    return result; 
+}
+
 function showError(error) { //show error if empty options
     var showErr = '';
     showErr += '<div id="displayAlert" class="alert alert-danger alert-dismissible fade show" role="alert">' +
-        '<strong>Oh my gosh!</strong> ' + ' ' + 'Empty news!' +  ' '  + error + 
+        '<strong>Warning</strong> ' + 'Empty' +  ' '  + error + 
         '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
         '<span aria-hidden="true">&times;</span>' +
         '</button>';
@@ -62,7 +68,7 @@ function sourceSelected() { //news option
         showSpinner('show');
         newsRequest(source, cat);                
     }else{
-        showError('source and category');
+        showError('both source and category');
         disabledBtn('true');
     }    
 } //end of sourceSelected
@@ -80,13 +86,10 @@ function newsRequest(source, cat) {  //request api
            
             var reStringify = JSON.stringify(response);
             var rejson = JSON.parse(reStringify);
-        console.log(rejson);
-
+       
             if (rejson.data.status == 'ok') {
-
                 if (rejson.data) {  //if(rejson.data)
-                                           //start
-                         var newsHtml = '';
+                       var newsHtml = '';
                          newsHtml += '<h5 class="card-header">' + newsOpt.options[newsOpt.selectedIndex].text + ' ' + 'Latest news' + '</h5>';
                          newsHtml += '<ul class="newsList container">';
                          for (var i = 0; i < 8; i++) {
@@ -110,10 +113,10 @@ function newsRequest(source, cat) {  //request api
                             '</figure>' +
                                 '<div class="card-body">' +
                                 '<p class="card-link">' + rejson.data.articles[i].source.name + '</p>' +
-                                '<p class="card-link">' + rejson.data.articles[i].publishedAt + '</p>' +
+                                '<p class="card-link publishedTime">' + converTime(rejson.data.articles[i].publishedAt) +  '</p>' +
                                 '</div>' +
                             '</div>' +
-                            '</li>';   
+                            '</li>'; 
                              } // if (rejson.data.articles.length > 0                                            
                          } //for loops json
                          newsHtml += '</ul>'; 
