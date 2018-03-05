@@ -98,6 +98,83 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.js-grid-news {
+    padding: 1em;
+    height: 75vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 0 2em 0;
+}
+ .js-grid-main .newsImg {
+    visibility: hidden;
+    height: 0;
+    widows: 100%;
+}
+.js-grid-main .NewsImgWrap {
+    height: 100%;
+    background-position: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+}
+.card-body-parent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+.card-body-parent .card-body {
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+.card-body-parent .card-footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: .5em;
+    box-sizing: border-box;
+    border: 0;
+}
+.card-body-parent .text-muted {
+    color: #6c757d!important;
+    flex: 1;
+    text-align: center;
+}
+.newsImg {
+    width: 100%;
+}
+.js-grid-main > .row {
+    padding: 0;
+    height: inherit;
+}
+#grid-8{
+    padding: 0 10px 0 0;
+    max-width: 100%;
+    height: inherit;
+}
+#grid-4{
+    padding: 0;
+    max-width: 100%;
+    height: inherit;
+}
+.row.grid-4-row {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: space-between;
+}
+.col.grid-4-child-row {
+    flex: 1;
+    height: 100%;
+}
+.js-grid-main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.img-box {
+    height: inherit;
+}
 .newsDropDown {
     display: flex;
     width: 100%;
@@ -158,7 +235,7 @@ ul.newsList.container {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    justify-content: space-between;
+    justify-content: start;
     align-content: center;
 }
 li.newsItem {
@@ -210,16 +287,16 @@ h5.card-header {
     position: absolute;
     bottom: 0;
     padding: 10px 10px 0 10px;
+    width: 100%;
 }
 select:focus, select:hover {
     cursor: pointer !important;
 }
-.btn.disabled, .btn:disabled {
+#searchBtn:disabled {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
 }
-
 
 
 

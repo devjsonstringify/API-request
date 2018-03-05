@@ -1,0 +1,11 @@
+var config = require("./config.js"),
+apiUrl = config.host,
+apiKey = config.api,
+searchBtn = document.querySelector("#searchBtn"),
+displayAlert = document.querySelector("#displayAlert"),
+displayRequest = document.querySelector(".displayRequestData"),
+newsOpt = document.querySelector("#news-selection"),
+pageNavigation = document.querySelector(".pageNavigation"),
+spinner = document.querySelector(".spinner"),
+eleIsVisible = false,
+catOpt = document.querySelector("#cat-selection");
