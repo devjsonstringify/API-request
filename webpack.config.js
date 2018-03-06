@@ -14,7 +14,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
-            }
+            },
+            {
+                test: /progressively.*\.js$/,
+                loader: 'imports-loader?this=>window',
+             },
         ]
     },
      plugins: [
@@ -22,7 +26,10 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-             popper: "popper"
+            popper: "popper"            
         })
     ]
+    // externals: {
+    //         progressively: "progressively"
+    // }
 };

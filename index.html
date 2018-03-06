@@ -6,34 +6,33 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/main.css">       
+        <link rel="stylesheet" href="https://unpkg.com/progressively/dist/progressively.min.css">
+        <link rel="stylesheet" href="src/css/main.css">     
         
            
-    </head>
+    </head> 
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <header>
+            <!-- Image and text -->
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="src/assets/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> 
+                </a>
+            </nav>
+        </header>
         <div class="container-fluid main-wrapper">
-            <div class="container">
-                            
-                <div class="jumbotron">
-                    <h1 class="display-4">News API</h1>
-                    <p class="lead">This is a simple News API where you can select news sources and its category like business, sports etc. </p>
-                    <p>The information display below is top headlines.</p>
-                </div>
 
-                <div class="newsDropDown">
+           <div class="js-grid-news"></div>
+            <div class="container">                           
+               <div class="newsDropDown" id="js-news-dropDown-options">
                    <div class="newsource">
                         <select id="news-selection" class="custom-select custom-select-lg mb-3">
                             <option selected>SELECT NEWS SOURCE</option>
@@ -68,24 +67,12 @@
             <div class="displayRequestData"></div>
         </div> <!-- container -->
 
-        
-
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-            crossorigin="anonymous"></script>
         </body>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/axios.js"></script>
-        <script src="/js/pagination.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>     
-
+        <!-- <script src="src/js/plugins.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
+        <script src="dist/bundle.js"></script> 
+                 
+      
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

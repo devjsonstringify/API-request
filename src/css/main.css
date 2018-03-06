@@ -116,6 +116,7 @@ textarea {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     position: relative;
+    overflow: hidden;
 }
 .card-body-parent {
     position: absolute;
@@ -160,8 +161,11 @@ textarea {
 .row.grid-4-row {
     display: flex;
     flex-direction: column;
-    height: inherit;
+    height: 100%;
     justify-content: space-between;
+}
+.grid-4-child-row:first-child {
+    padding-bottom: 10px;
 }
 .col.grid-4-child-row {
     flex: 1;
@@ -174,6 +178,34 @@ textarea {
 }
 .img-box {
     height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+.gradient-bg {
+    background: url(../assets/img/cover.png) top left no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+}
+.js-grid-news .card-title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    line-height: .9em;
+    font-size: 1.5em;
+    color: #ffff;
+    font-weight: 700;
+    text-align: left;
+}
+.js-grid-news .text-muted{
+    margin-bottom: 0 !important;
+    color: #ffff !important;
+    text-align: left !important;
 }
 .newsDropDown {
     display: flex;
@@ -297,7 +329,6 @@ select:focus, select:hover {
     background-color: #dc3545;
     border-color: #dc3545;
 }
-
 
 
 
