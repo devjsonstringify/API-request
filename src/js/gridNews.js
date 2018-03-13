@@ -62,8 +62,7 @@ function newsRequest(){
                                         '<div class="img-box">' +
                                             '<a href="' +  rejson.data.articles[1].url + '" target="_blank">' + 
                                                '<div class="progressive__bg progressive__img progressive--not-loaded NewsImgWrap" data-progressive=" '+ rejson.data.articles[1].urlToImage +' " style=" background-image: url(' + rejson.data.articles[1].urlToImage + ');">' + 
-                                                    '<img class="newsImg" src="' + rejson.data.articles[1].urlToImage + '">' + 
-                                                     '<div class="gradient-bg">' + '</div>' +
+                                                    '<div class="gradient-bg">' + '</div>' +
                                                 '<div class="card-body-parent">'   + 
                                                         '<div class="card-body">' + 
                                                                     '<h5 class="card-title">' +  rejson.data.articles[1].title +'</h5>' +
@@ -83,7 +82,6 @@ function newsRequest(){
                                                     '<div class="img-box">' +
                                                     '<a href="' +  rejson.data.articles[2].url + '" target="_blank">' + 
                                                         '<div class="progressive__bg progressive__img progressive--not-loaded NewsImgWrap" data-progressive=" '+ rejson.data.articles[2].urlToImage +' " style=" background: url(' + rejson.data.articles[2].urlToImage + ');">' +
-                                                        '<img class="newsImg" src="' + rejson.data.articles[2].urlToImage + '">' + 
                                                            '<div class="gradient-bg">' + '</div>' +
                                                             '<div class="card-body-parent">'   + 
                                                             '<div class="card-body">' + 
@@ -99,7 +97,6 @@ function newsRequest(){
                                                 '<div class="img-box">' +
                                                 '<a href="' +  rejson.data.articles[3].url + '" target="_blank">' + 
                                                     '<div class="progressive__bg progressive__img progressive--not-loaded NewsImgWrap" data-progressive=" '+ rejson.data.articles[3].urlToImage +' " style=" background: url(' + rejson.data.articles[3].urlToImage + ');">' + 
-                                                   '<img class="newsImg" src="' + rejson.data.articles[3].urlToImage + '">' +
                                                       '<div class="gradient-bg">' + '</div>' +
                                                         '<div class="card-body-parent">'   +  
                                                           '<div class="card-body">' + 
