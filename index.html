@@ -9,25 +9,48 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/progressively/dist/progressively.min.css">
-        <link rel="stylesheet" href="src/css/main.css">     
+           
         
            
     </head> 
     <body>
+    
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <div class="container-fluid">
         <header>
             <!-- Image and text -->
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="src/assets/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> 
-                </a>
+            <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+            <div class="row justify-content-between">
+                <div class="col-10"><a class="navbar-brand" href="#">XXXXXX</a></div>
+                <div class="col-2"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Weather</a>
+                        </li>
+                    </ul>
+                </div></div>
+            </div>
             </nav>
         </header>
+    </div>
         <div class="container-fluid main-wrapper">
 
            <div class="js-grid-news"></div>
@@ -36,7 +59,7 @@
                    <div class="newsource">
                         <select id="news-selection" class="custom-select custom-select-lg mb-3">
                             <option selected>SELECT NEWS SOURCE</option>
-                            <option value="us">United States</option>
+                            <option value="us"><p class="flag-icon flag-icon-us">United States</p></option>
                             <option value="de">German</option>
                             <option value="ru">Russia</option>
                             <option value="sg">Singapore</option>
@@ -70,7 +93,7 @@
         </body>
         <!-- <script src="src/js/plugins.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.js"></script>
-        <script src="dist/bundle.js"></script> 
+        <script src="dist/main.bundle.js"></script> 
                  
       
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

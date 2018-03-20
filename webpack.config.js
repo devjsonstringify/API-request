@@ -5,23 +5,37 @@ module.exports = {
     // configuration
     entry: "./src/js/main.js",
     output: {
-        filename: "bundle.js",
-        path: path.join(__dirname, "dist")
+        filename:"[name].bundle.js",
+        path: path.join(__dirname, "dist"),
+        publicPath: "http://127.0.0.1:8000/"
     },
     watch: true,
+    mode: 'development',
+    
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ["style-loader", "css-loader"]
             },
             {
-                test: /progressively.*\.js$/,
-                loader: 'imports-loader?this=>window',
-             },
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                    presets: ["env"]
+                    }
+                }
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/i,
+                use: ["url-loader"]
+            }            
         ]
     },
-     plugins: [
+
+    plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",

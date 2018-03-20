@@ -215,11 +215,14 @@ textarea {
 .newsDropDown {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .newsDropDown select {
     margin-bottom: 0 !important;
     border-radius: 0 !important;
+}
+.custom-select-lg{
+    font-size: 85% !important;
 }
 .searchBox {
     border: 1px solid rgba(0,0,0,.15);
@@ -249,8 +252,15 @@ textarea {
 .errorDisplayer {
     padding: 1rem 1rem 0 1rem;
 }
+.js-grid-news-source {
+    position: absolute;
+    top: 6%;
+    z-index: 10;
+    color: #ffffff;
+    text-transform: uppercase;
+}
 #searchBtn {
-    font-size: 1rem;
+    font-size: 85%;
     padding: .5rem;
     border-radius: 0;
     display: flex;

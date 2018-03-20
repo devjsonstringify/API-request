@@ -44,6 +44,10 @@ function IsnotValid(error){
         } 
 }
 
+function returnNewsHeadline(){
+    var currNew = newsOpt.options[newsOpt.selectedIndex].text;
+    return currNew;   
+}
 
 function sourceSelected() {
     //news option
@@ -71,7 +75,7 @@ function newsRequest(source, cat) {//request api
     if (rejson.data.status == "ok") {
         if (rejson.data) {
         var newsHtml = "";
-        newsHtml += '<h5 class="card-header">' + newsOpt.options[newsOpt.selectedIndex].text + " " + "Latest news" + "</h5>";
+        newsHtml += '<h5 class="card-header">' + returnNewsHeadline() + " " + "Latest news" + "</h5>";
         newsHtml += '<ul class="newsList container">';
 
         for (var i = 0; i < 8; i++) {

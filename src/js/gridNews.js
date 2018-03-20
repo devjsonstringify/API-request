@@ -1,6 +1,7 @@
 var axios = require("axios"), //global variables
         _ = require("lodash"),
         $ = require("jquery"),
+        headlines = require('./main.js'),
         progressively = require("./lazyLoading.js"),                  
         config = require("./config.js"),
         apiUrl = config.host,
@@ -9,8 +10,6 @@ var axios = require("axios"), //global variables
         randomCountry = ['us', 'ph', 'sg'],
         source = _.sample(randomCountry, randomCountry.length),
         hideDropDownOptions = document.querySelector('#js-news-dropDown-options');
-
-
     
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -57,6 +56,9 @@ function newsRequest(){
                 for (var i = 0; i < 3; i++) {
                  var gridnews = "";
                         gridnews  += '<div class="js-grid-main">' +
+                           '<div class="js-grid-news-source">' + 
+                             '<h2>'  + 'Headline news' + '<br>' + 'from' + ' ' + source  + '</h2>' + 
+                           '</div>' + 
                             '<div class="row">' +
                                 '<div id="grid-8" class="col-8">' +
                                         '<div class="img-box">' +
